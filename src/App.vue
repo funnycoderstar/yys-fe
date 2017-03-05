@@ -12,14 +12,47 @@
 </script>
 
 <style lang="less">
-    @import './util.less';
+    body,
+    html,
     #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        .px2rem(width, 750);
-        .px2rem(width, 1344);
+        width: 100%;
+        height: 100%;
+        // font-family: "HiraginoSansGB-w3", Arial, Verdana, 微软雅黑, 黑体, serif;
+    }
+    
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    div,
+    a,
+    img {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+    
+    input {
+        -webkit-appearance: none;
+    }
+    
+    .fix-float {
+        &::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+    }
+    
+    input:focus {
+        border: 0 ! important;
+        outline: none;
     }
 </style>
