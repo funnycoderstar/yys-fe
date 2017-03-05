@@ -30,6 +30,7 @@ module.exports = {
     'semi': ['error', 'always'],
     'no-var': ['error'],
     'prefer-const': ['error'],
-    'space-before-function-paren': [0]
+    'space-before-function-paren': [0],
+    'eol-last': 0
   }
 }
