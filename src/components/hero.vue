@@ -17,8 +17,10 @@
         <!-- tab-container -->
         <mt-tab-container v-model="selected">
             <mt-tab-container-item id="1">
+                <HeroAwaken></HeroAwaken>
             </mt-tab-container-item>
             <mt-tab-container-item id="2">
+                <HeroSkills></HeroSkills>
             </mt-tab-container-item>
         </mt-tab-container>
     </div>
@@ -29,6 +31,8 @@
         Navbar,
         TabItem
     } from 'mint-ui';
+    import HeroAwaken from './heroAwaken.vue';
+    import HeroSkills from './heroSkills.vue';
 
     export default {
         name: 'hero',
@@ -39,7 +43,9 @@
         },
         components: {
             Navbar,
-            TabItem
+            TabItem,
+            HeroAwaken,
+            HeroSkills
         }
     };
 </script>

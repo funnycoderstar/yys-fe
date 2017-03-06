@@ -34,7 +34,6 @@
 
 <style lang="less">
     @import '../util.less';
-    @color: red;
     .home {
         text-align: center;
         background: url("../assets/bg.jpg") center center;
