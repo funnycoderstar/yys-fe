@@ -8,6 +8,7 @@
         </div>
         <div class="search">
             <input type="text" placeholder="搜索式神">
+            <span @click="showHero">搜索</span>
         </div>
         <div class="img">
             <img src="../assets/bunny.gif" alt="">
@@ -22,9 +23,13 @@
             return {
                 title: '首页'
             };
+        },
+        methods: {
+            showHero() {
+                this.$router.push('/hero');
+            }
         }
     };
-
 </script>
 
 <style lang="less">
@@ -77,6 +82,24 @@
             input:focus {
                 border: 1px solid pink;
                 outline: none;
+            }
+            span {
+                background-color: #3fadf9;
+                position: absolute;
+                .px2rem(padding,
+                10);
+                top: 50%;
+                left:77%;
+                .px2rem(font-size,
+                30);
+                .px2rem(width,
+                100);
+                .px2rem(margin-top,
+                -100);
+                .px2rem(height,
+                50);
+                .px2rem(line-height,
+                50);
             }
         }
         .img {
