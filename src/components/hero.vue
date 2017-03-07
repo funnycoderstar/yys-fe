@@ -1,5 +1,6 @@
 <template>
     <div class="hero">
+        <img src="../assets/angle-leftB@3x.png" @click="handelBack">
         <div class="hero-info">
             <ul>
                 <li>名称</li>
@@ -46,6 +47,11 @@
             TabItem,
             HeroAwaken,
             HeroSkills
+        },
+        methods: {
+            handelBack() {
+                this.$router.back();
+            }
         }
     };
 </script>
@@ -58,6 +64,13 @@
         padding:0;
     }
     .hero {
+        img{
+            .px2rem(width,
+            20);
+            float:left;
+            .px2rem(padding,
+                20);
+        }
         .hero-info{
             .px2rem(width,
             750);
