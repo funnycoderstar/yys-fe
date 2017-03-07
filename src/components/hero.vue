@@ -1,7 +1,10 @@
 <template>
     <div class="hero">
-        <img src="../assets/angle-leftB@3x.png" @click="handelBack">
+        <img src="../assets/angle-leftB@3x.png" @click="handelBack" class="backBtn">
         <div class="hero-info">
+            <div class="heroFace">
+                <img src="../assets/jiu.jpg" alt="">
+            </div>
             <ul>
                 <li>名称</li>
                 <li>CV</li>
@@ -64,7 +67,7 @@
         padding:0;
     }
     .hero {
-        img{
+        .backBtn{
             .px2rem(width,
             20);
             float:left;
@@ -80,6 +83,14 @@
             26);
             background: url("../assets/heroBg.jpg") center center no-repeat;
             background-size: 100% 100%;
+            .heroFace {
+                float: left;
+                height: 100%;
+                img{
+                    .px2rem(padding-top,
+                    75);
+                }
+            }
             ul{
                 .px2rem(padding-top,
                 30);
