@@ -4,15 +4,15 @@
             <h1>{{ name }}</h1>
             <ul>
                 <li class="title">消耗:</li>
-                <li>{{ Consumption }}</li>
+                <li><span>{{ Consumption }}</span></li>
             </ul>
             <ul>
                 <li class="title">效果:</li>
-                <li>{{ effect }}</li>
+                <li><span>{{ effect }}</span></li>
             </ul>
             <ul>
                 <li class="title">升级:</li>
-                <li v-for="item in upgrade">{{ item }}</li>
+                <li v-for="item in upgrade"><span>{{ item }}</span></li>
             </ul>
         </div>
     </div>
@@ -48,13 +48,14 @@
         .px2rem(padding, 15);
         // background:url("../assets/bg3.jpg") center center no-repeat;
         // background-size:100% 100%;
-        background-color: olivedrab;
+        background-color: #26a2ff;
         .px2rem(border-radius, 10);
         color:#fff;
         h1{
             text-align: center;
-            .px2rem(padding, 10);
+            .px2rem(padding, 8);
             .px2rem(font-size, 35);
+            color: purple;
         }
         ul{
            .px2rem(margin-bottom, 15); 
@@ -65,6 +66,9 @@
            li{
                .px2rem(text-indent, 35);
                .px2rem(line-height, 40);
+               span{
+                   color:red;
+               }
            } 
         }
     }

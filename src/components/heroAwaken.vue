@@ -4,24 +4,24 @@
             <h1>技能变化</h1>
             <ul>
                 <li>
-                    <p>{{ crit.from }}</p>
-                    <p>{{ crit.to }}</p>
+                    <p>攻击</p>
+                    <p><span>{{ crit.from }} ~ {{ crit.to }}</span></p>
                 </li>
                 <li>
-                    <p>{{ speed.from }}</p>
-                    <p>{{ speed.to }}</p>
+                    <p>生命</p>
+                    <p><span>{{ speed.from }} ~ {{ speed.to }}</span></p>
                 </li>
                 <li>
-                    <p>{{ defense.from }}</p>
-                    <p>{{ defense.to }}</p>
+                    <p>防御</p>
+                    <p><span>{{ defense.from }} ~ {{ defense.to }}</span></p>
                 </li>
                 <li>
-                    <p>{{ life.from }}</p>
-                    <p>{{ life.to }}</p>
+                    <p>速度</p>
+                    <p><span>{{ life.from }} ~ {{ life.to }}</span></p>
                 </li>
                 <li>
-                    <p>{{ attack.from }}</p>
-                    <p>{{ attack.to }}</p>
+                    <p>暴击</p>
+                    <p><span>{{ attack.from }} ~ {{ attack.to }}</span></p>
                 </li>
             </ul>
         </div>
@@ -30,13 +30,13 @@
             <ul>
                 <li v-for="item in material">
                     <p>{{ item.name }}</p>
-                    <p>{{ item.count }}</p>
+                    <p><span>{{ item.count }}</span></p>
                 </li>
             </ul>
         </div>
         <div class="heroAwaken-info">
             <h1>觉醒技能</h1>
-            <div class="heroSkill">{{ skill }}</div>
+            <div class="heroSkill"><span>{{ skill }}</span></div>
         </div>
     </div>
 </template>
@@ -68,36 +68,41 @@
             }
         }
     };
+
 </script>
 
 <style lang="less">
-@import '../util.less';
+    @import '../util.less';
     .heroAwaken {
         .px2rem(font-size, 25);
-        .px2rem(padding, 15);
-        .heroAwaken-info{
+        .px2rem(margin, 15);
+        .heroAwaken-info {
             // background:url("../assets/bg1.jpg") center center no-repeat;
             // background-size:100% 100%;
-            background-color: burlywood;
+            background-color: #26a2ff;
             .px2rem(border-radius, 10);
-            color:#fff;
+            color: #fff;
             .px2rem(height, 370);
-            h1{
+            span {
+                color: red;
+            }
+            h1 {
                 text-align: center;
                 .px2rem(padding, 15);
                 .px2rem(font-size, 35);
+                color: purple;
             }
-            .heroSkill{
+            .heroSkill {
                 text-align: center;
                 .px2rem(line-height, 200);
             }
-            ul{
+            ul {
                 text-align: center;
                 overflow: hidden;
-                li{
-                    display:flex;
+                li {
+                    display: flex;
                     align-content: space-around;
-                    p{
+                    p {
                         width: 50%;
                         .px2rem(line-height, 50);
                         text-align: center;

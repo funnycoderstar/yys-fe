@@ -6,12 +6,12 @@
                 <img :src="require(`../assets/${heroInfo.name}.jpg`)" alt="">
             </div>
             <ul>
-                <li>名称: {{ heroInfo.name }}</li>
-                <li>CV: {{ heroInfo.cv }}</li>
-                <li>稀有度: {{ heroInfo.rarity }}</li>
-                <li>类型: {{ heroInfo.type }}</li>
-                <li>斗技指数: {{ heroInfo.pkExponent }}</li>
-                <li>刷图指数: {{ heroInfo.brushMapExponent }}</li>
+                <li>名称: <span>{{ heroInfo.name }}</span></li>
+                <li>CV: <span>{{ heroInfo.cv }}</span></li>
+                <li>稀有度: <span>{{ heroInfo.rarity }}</span></li>
+                <li>类型: <span>{{ heroInfo.type }}</span></li>
+                <li>斗技指数: <span>{{ heroInfo.pkExponent }}</span></li>
+                <li>刷图指数: <span>{{ heroInfo.brushMapExponent }}</span></li>
             </ul>
         </div>
         <mt-navbar v-model="selected">
@@ -21,24 +21,12 @@
         <!-- tab-container -->
         <mt-tab-container v-model="selected">
             <mt-tab-container-item id="1" v-if="awaken">
-                <HeroAwaken
-                :skill="awaken.skill"
-                :material="awaken.material"
-                :crit="awaken.crit"
-                :speed="awaken.speed"
-                :defense="awaken.defense"
-                :life="awaken.life"
-                :attack="awaken.attack"
-                ></HeroAwaken>
+                <HeroAwaken :skill="awaken.skill" :material="awaken.material" :crit="awaken.crit" :speed="awaken.speed" :defense="awaken.defense"
+                    :life="awaken.life" :attack="awaken.attack"></HeroAwaken>
             </mt-tab-container-item>
             <mt-tab-container-item id="2" v-if="heroInfo.skills">
-                <HeroSkills
-                v-for="item in heroInfo.skills"
-                :upgrade="item.upgrade"
-                :effect="item.effect"
-                :Consumption="item.Consumption"
-                :name="item.name"
-                ></HeroSkills>
+                <HeroSkills v-for="item in heroInfo.skills" :upgrade="item.upgrade" :effect="item.effect" :Consumption="item.Consumption"
+                    :name="item.name"></HeroSkills>
             </mt-tab-container-item>
         </mt-tab-container>
     </div>
@@ -109,26 +97,26 @@
                 float: left;
                 height: 100%;
                 img {
-                    .px2rem(padding-top,
-                    30);
+                    .px2rem(padding-top, 25);
+                    .px2rem(width, 250);
                 }
             }
             ul {
-                .px2rem(padding-top,
-                30);
+                float:left;
+                .px2rem(padding-top, 30);
+                .px2rem(margin-left, 100);
                 li {
-                    color: red;
-                    text-align: center;
-                    .px2rem(line-height,
-                    40);
+                    .px2rem(line-height, 40);
+                    span {
+                        color: red;
+                        .px2rem(padding-left, 30);
+                    }
                 }
             }
         }
         .mint-tab-item-label {
-            .px2rem(font-size,
-            30);
-            .px2rem(padding,
-            10);
+            .px2rem(font-size, 30);
+            .px2rem(padding, 10);
         }
     }
 </style>
