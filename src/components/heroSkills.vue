@@ -1,57 +1,18 @@
 <template>
     <div class="heroSkills">
         <div class="skill">
-            <h1>鬼葫芦</h1>
+            <h1>{{ name }}</h1>
             <ul>
                 <li class="title">消耗:</li>
-                <li>0</li>
+                <li>{{ Consumption }}</li>
             </ul>
             <ul>
                 <li class="title">效果:</li>
-                <li>酒吞童子以妖力操控鬼葫芦向1名敌人喷出瘴气，造成攻击100%的伤害。根据身上的狂气数量进行追击，每一层狂气追加一次攻击。</li>
+                <li>{{ effect }}</li>
             </ul>
             <ul>
                 <li class="title">升级:</li>
-                <li>Lv.2技能伤害额外+5%</li>
-                <li>Lv.3技能伤害额外+5%</li>
-                <li>Lv.4技能伤害额外+5%</li>
-                <li>Lv.5技能伤害额外+10%</li>
-            </ul>
-        </div>
-        <div class="skill">
-            <h1>鬼葫芦</h1>
-            <ul>
-                <li class="title">消耗:</li>
-                <li>0</li>
-            </ul>
-            <ul>
-                <li class="title">效果:</li>
-                <li>酒吞童子以妖力操控鬼葫芦向1名敌人喷出瘴气，造成攻击100%的伤害。根据身上的狂气数量进行追击，每一层狂气追加一次攻击。</li>
-            </ul>
-            <ul>
-                <li class="title">升级:</li>
-                <li>Lv.2技能伤害额外+5%</li>
-                <li>Lv.3技能伤害额外+5%</li>
-                <li>Lv.4技能伤害额外+5%</li>
-                <li>Lv.5技能伤害额外+10%</li>
-            </ul>
-        </div>
-        <div class="skill">
-            <h1>鬼葫芦</h1>
-            <ul>
-                <li class="title">消耗:</li>
-                <li>0</li>
-            </ul>
-            <ul>
-                <li class="title">效果:</li>
-                <li>酒吞童子以妖力操控鬼葫芦向1名敌人喷出瘴气，造成攻击100%的伤害。根据身上的狂气数量进行追击，每一层狂气追加一次攻击。</li>
-            </ul>
-            <ul>
-                <li class="title">升级:</li>
-                <li>Lv.2技能伤害额外+5%</li>
-                <li>Lv.3技能伤害额外+5%</li>
-                <li>Lv.4技能伤害额外+5%</li>
-                <li>Lv.5技能伤害额外+10%</li>
+                <li v-for="item in upgrade">{{ item }}</li>
             </ul>
         </div>
     </div>
@@ -59,7 +20,21 @@
 
 <script>
     export default {
-        name: 'heroSkills'
+        name: 'heroSkills',
+        props: {
+            upgrade: {
+                type: Array
+            },
+            effect: {
+                type: String
+            },
+            Consumption: {
+                type: Number
+            },
+            name: {
+                type: String
+            }
+        }
     };
 </script>
 

@@ -4,58 +4,69 @@
             <h1>技能变化</h1>
             <ul>
                 <li>
-                    <p>A->S</p>
-                    <p>1000</p>
+                    <p>{{ crit.from }}</p>
+                    <p>{{ crit.to }}</p>
                 </li>
                 <li>
-                    <p>A->S</p>
-                    <p>1000</p>
+                    <p>{{ speed.from }}</p>
+                    <p>{{ speed.to }}</p>
                 </li>
                 <li>
-                    <p>A->S</p>
-                    <p>1000</p>
+                    <p>{{ defense.from }}</p>
+                    <p>{{ defense.to }}</p>
                 </li>
                 <li>
-                    <p>A->S</p>
-                    <p>1000</p>
+                    <p>{{ life.from }}</p>
+                    <p>{{ life.to }}</p>
                 </li>
                 <li>
-                    <p>A->S</p>
-                    <p>1000</p>
+                    <p>{{ attack.from }}</p>
+                    <p>{{ attack.to }}</p>
                 </li>
             </ul>
         </div>
         <div class="heroAwaken-info">
             <h1>觉醒材料</h1>
             <ul>
-                <li>
-                    <p>天雷鼓-中级</p>
-                    <p>10</p>
-                </li>
-                <li>
-                    <p>天雷鼓-中级</p>
-                    <p>10</p>
-                </li>
-                <li>
-                    <p>天雷鼓-中级</p>
-                    <p>10</p>
-                </li>
-                <li>
-                    <p>天雷鼓-中级</p>
-                    <p>10</p>
+                <li v-for="item in material">
+                    <p>{{ item.name }}</p>
+                    <p>{{ item.count }}</p>
                 </li>
             </ul>
         </div>
         <div class="heroAwaken-info">
             <h1>觉醒技能</h1>
-            <div class="heroSkill">觉醒技能觉醒技能觉醒技能觉醒技能</div>
+            <div class="heroSkill">{{ skill }}</div>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'heroAwaken'
+        name: 'heroAwaken',
+        props: {
+            skill: {
+                type: String
+            },
+            material: {
+                type: Array
+            },
+            crit: {
+                type: Object
+            },
+            speed: {
+                type: Object
+            },
+            defense: {
+                type: Object
+            },
+            life: {
+                type: Object
+            },
+            attack: {
+                type: Object
+            }
+        }
     };
 </script>
 

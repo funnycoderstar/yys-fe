@@ -12,7 +12,7 @@ export default new Router({
         component: Home
     },
     {
-        path: '/hero',
+        path: '/hero/*',
         name: '式神',
         component: Hero
     }

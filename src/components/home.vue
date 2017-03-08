@@ -7,7 +7,7 @@
             <img src="../assets/logo.png" alt="">
         </div>
         <div class="search">
-            <input type="text" placeholder="搜索式神">
+            <input type="text" placeholder="搜索式神" v-model="heroName">
             <span @click="showHero">搜索</span>
         </div>
         <div class="img">
@@ -21,15 +21,21 @@
         name: 'hello',
         data() {
             return {
-                title: '首页'
+                title: '首页',
+                heroName: ''
             };
         },
         methods: {
             showHero() {
-                this.$router.push('/hero');
+                if (this.heroName !== '') {
+                    this.$router.push(`/hero/${this.heroName}`);
+                } else {
+                    console.log('请输入要搜索的式神');
+                }
             }
         }
     };
+
 </script>
 
 <style lang="less">
@@ -88,7 +94,7 @@
                 .px2rem(padding,
                 10);
                 top: 50%;
-                left:77%;
+                left: 77%;
                 .px2rem(font-size,
                 30);
                 .px2rem(width,
