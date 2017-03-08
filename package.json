@@ -10,10 +10,13 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "mint-ui": "^2.2.0",
     "normalize.css": "^5.0.0",
     "vue": "^2.2.1",
-    "vue-router": "^2.2.0"
+    "vue-axios": "^1.2.2",
+    "vue-router": "^2.2.0",
+    "vuex": "^2.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
