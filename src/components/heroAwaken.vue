@@ -76,8 +76,10 @@
         .px2rem(font-size, 25);
         .px2rem(padding, 15);
         .heroAwaken-info{
-            background:url("../assets/bg1.jpg") center center no-repeat;
-            background-size:100% 100%;
+            // background:url("../assets/bg1.jpg") center center no-repeat;
+            // background-size:100% 100%;
+            background-color: burlywood;
+            .px2rem(border-radius, 10);
             color:#fff;
             .px2rem(height, 370);
             h1{

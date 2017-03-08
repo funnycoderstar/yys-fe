@@ -6,12 +6,12 @@
                 <img :src="require(`../assets/${heroInfo.name}.jpg`)" alt="">
             </div>
             <ul>
-                <li>名称:{{ heroInfo.name }}</li>
-                <li>CV:{{ heroInfo.cv }}</li>
-                <li>稀有度:{{ heroInfo.rarity }}</li>
-                <li>类型:{{ heroInfo.type }}</li>
-                <li>斗技指数:{{ heroInfo.pkExponent }}</li>
-                <li>刷图指数:{{ heroInfo.brushMapExponent }}</li>
+                <li>名称: {{ heroInfo.name }}</li>
+                <li>CV: {{ heroInfo.cv }}</li>
+                <li>稀有度: {{ heroInfo.rarity }}</li>
+                <li>类型: {{ heroInfo.type }}</li>
+                <li>斗技指数: {{ heroInfo.pkExponent }}</li>
+                <li>刷图指数: {{ heroInfo.brushMapExponent }}</li>
             </ul>
         </div>
         <mt-navbar v-model="selected">
@@ -102,8 +102,9 @@
             .px2rem(width, 750);
             .px2rem(height, 300);
             .px2rem(font-size, 26);
-            background: url("../assets/heroBg.jpg") center center no-repeat;
-            background-size: 100% 100%;
+            // background: url("../assets/heroBg.jpg") center center no-repeat;
+            // background-size: 100% 100%;
+            background-color: peachpuff;
             .heroFace {
                 float: left;
                 height: 100%;

@@ -66,6 +66,7 @@
             input {
                 margin: 0 auto;
                 border: 1px solid #333;
+                .px2rem(border-radius, 10);
                 .px2rem(width,
                 600);
                 .px2rem(padding,
@@ -78,11 +79,10 @@
                 30);
                 position: absolute;
                 left: 50%;
-                top: 50%;
                 .px2rem(margin-left,
                 -300);
                 .px2rem(margin-top,
-                -100);
+                50);
             }
             input:focus {
                 border: 1px solid pink;
@@ -93,18 +93,18 @@
                 position: absolute;
                 .px2rem(padding,
                 10);
-                top: 50%;
                 left: 77%;
                 .px2rem(font-size,
                 30);
                 .px2rem(width,
                 100);
                 .px2rem(margin-top,
-                -100);
+                50);
                 .px2rem(height,
                 50);
                 .px2rem(line-height,
                 50);
+                .px2rem(border-radius, 10);
             }
         }
         .img {

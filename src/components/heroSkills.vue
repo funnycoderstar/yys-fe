@@ -46,8 +46,10 @@
     .skill{
         .px2rem(margin, 15);
         .px2rem(padding, 15);
-        background:url("../assets/bg3.jpg") center center no-repeat;
-        background-size:100% 100%;
+        // background:url("../assets/bg3.jpg") center center no-repeat;
+        // background-size:100% 100%;
+        background-color: olivedrab;
+        .px2rem(border-radius, 10);
         color:#fff;
         h1{
             text-align: center;
