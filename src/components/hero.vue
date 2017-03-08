@@ -2,8 +2,8 @@
     <div class="hero">
         <img src="../assets/angle-leftB@3x.png" @click="handelBack" class="backBtn">
         <div class="hero-info">
-            <div class="heroFace">
-                <img src="../assets/jiu.jpg" alt="">
+            <div class="heroFace" v-if="heroInfo.name">
+                <img :src="require(`../assets/${heroInfo.name}.jpg`)" alt="">
             </div>
             <ul>
                 <li>名称:{{ heroInfo.name }}</li>
@@ -31,7 +31,7 @@
                 :attack="awaken.attack"
                 ></HeroAwaken>
             </mt-tab-container-item>
-            <mt-tab-container-item id="2">
+            <mt-tab-container-item id="2" v-if="heroInfo.skills">
                 <HeroSkills
                 v-for="item in heroInfo.skills"
                 :upgrade="item.upgrade"
@@ -109,7 +109,7 @@
                 height: 100%;
                 img {
                     .px2rem(padding-top,
-                    75);
+                    30);
                 }
             }
             ul {
