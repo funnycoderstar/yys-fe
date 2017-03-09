@@ -10,12 +10,11 @@ const hero = {
     },
     actions: {
         getHeroInfo(context, data) {
-            return vue.axios.get(`${data.apiUrl}/${data.heroName}`).then((response) => {
+            return vue.axios.get(`${data.apiUrl}hero/${data.heroName}`).then((response) => {
                 context.commit('setHeroInfo', response.data);
                 return response.data;
             });
         }
-
     }
 
 };

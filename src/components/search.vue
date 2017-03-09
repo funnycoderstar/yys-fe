@@ -28,7 +28,7 @@
         methods: {
             showHero() {
                 if (this.heroName !== '') {
-                    this.$router.push(`/hero/${this.heroName}`);
+                    this.$router.push(`/SearchHero/${this.heroName}`);
                 } else {
                     console.log('请输入要搜索的式神');
                 }

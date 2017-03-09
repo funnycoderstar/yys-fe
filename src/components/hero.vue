@@ -5,7 +5,8 @@
             <div class="heroFace" v-if="heroInfo.name">
                 <img :src="require(`../assets/${heroInfo.name}.jpg`)" alt="">
             </div>
-            <ul>
+            <div v-else  class="heroFace"></div>
+            <ul v-if="heroInfo">
                 <li>名称: <span>{{ heroInfo.name }}</span></li>
                 <li>CV: <span>{{ heroInfo.cv }}</span></li>
                 <li>稀有度: <span>{{ heroInfo.rarity }}</span></li>
@@ -53,14 +54,14 @@
             HeroSkills
         },
         computed: mapState({
-            heroInfo: state => state.hero.heroInfo
+            heroInfo: state => state.hero.heroInfo[0]
         }),
         created() {
             this.$store.dispatch('getHeroInfo', {
-                apiUrl: 'http://192.168.199.220:6600/hero',
+                apiUrl: window.apiUrl,
                 heroName: this.$route.params[0]
             }).then((response) => {
-                this.awaken = response.awaken;
+                this.awaken = response[0].awaken;
             });
         },
         methods: {
@@ -90,12 +91,11 @@
             .px2rem(width, 750);
             .px2rem(height, 300);
             .px2rem(font-size, 26);
-            // background: url("../assets/heroBg.jpg") center center no-repeat;
-            // background-size: 100% 100%;
             background-color: peachpuff;
             .heroFace {
                 float: left;
                 height: 100%;
+                .px2rem(width, 250);
                 img {
                     .px2rem(padding-top, 25);
                     .px2rem(width, 250);
@@ -109,7 +109,7 @@
                     .px2rem(line-height, 40);
                     span {
                         color: red;
-                        .px2rem(padding-left, 30);
+                        // .px2rem(padding-left, 30);
                     }
                 }
             }

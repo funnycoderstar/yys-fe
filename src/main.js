@@ -18,7 +18,7 @@ Vue.use(vueAxios, axios);
 Vue.use(vuex);
 
 Vue.config.productionTip = false;
-window.apiUrl = '192.168.199.220:6600/hero';
+window.apiUrl = 'http://192.168.199.220:6600/';
 
 /* eslint-disable no-new */
 new Vue({
