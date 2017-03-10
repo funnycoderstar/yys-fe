@@ -3,7 +3,7 @@
         <ComHead :pageTitle="title">
         </ComHead>
         <div class="wrap-heroList fix-float">
-            <ul class="heroItem" v-for="item in herosInfo" @click="showHeroInfo(item.name)">
+            <ul class="heroItem" v-for="item in herosInfo" @click="showHeroInfo(item.name)":key="item.id">
                 <li>
                     <img :src="require(`../assets/${item.name}.jpg`)" alt="" class="heroImg">
                 </li>
@@ -47,13 +47,21 @@
 
 <style lang="less">
     @import '../util.less';
+    .fix-float {
+        &::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+    }
     .heroList {
         .wrap-heroList {
             .px2rem(padding-top, 80);
+            background-color: #f1f1f1;
             .heroItem {
                 width: 50%;
                 float: left;
-                border-top: 1px solid #f5f5f5;
+                // border-top: 1px solid #f5f5f5;
                 .px2rem(border-width, 10);
                 .px2rem(padding, 20);
                 box-sizing: border-box;

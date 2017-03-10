@@ -77,12 +77,9 @@
         .px2rem(font-size, 25);
         .px2rem(margin, 15);
         .heroAwaken-info {
-            // background:url("../assets/bg1.jpg") center center no-repeat;
-            // background-size:100% 100%;
-            background-color: #26a2ff;
             .px2rem(border-radius, 10);
-            color: #fff;
             .px2rem(height, 370);
+            background-color: #fff;
             span {
                 color: red;
             }
@@ -90,7 +87,6 @@
                 text-align: center;
                 .px2rem(padding, 15);
                 .px2rem(font-size, 35);
-                color: purple;
             }
             .heroSkill {
                 text-align: center;

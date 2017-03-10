@@ -2,7 +2,7 @@
     <div class="heroList">
         <ComHead :pageTitle="title">
         </ComHead>
-        <div class="wrap-heroList fix-float">
+        <div class="wrap-heroList fix-float searchHero">
             <ul class="heroItem" v-for="item in herosInfo" @click="showHeroInfo(item.name)">
                 <li>
                     <img :src="require(`../assets/${item.name}.jpg`)" alt="" class="heroImg">
@@ -44,3 +44,10 @@
     };
 
 </script>
+
+<style lang="less">
+    @import '../util.less';
+    .searchHero> {
+        .px2rem(height, 1260);
+    }
+</style>

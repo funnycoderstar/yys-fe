@@ -3,6 +3,7 @@
         <ul class="tab-bar-container">
             <TabBarItem
                 v-for="(item, index) of items"
+                :key="item.id"
                 :name="item.name"
                 :image="item.image"
                 :imageSelected="item.imageSelected"

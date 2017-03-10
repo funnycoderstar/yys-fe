@@ -42,20 +42,15 @@
 @import '../util.less';
 .heroSkills{
     .px2rem(font-size, 25);
-     background-color: #f5f5f5;
     .skill{
         .px2rem(margin, 15);
         .px2rem(padding, 15);
-        // background:url("../assets/bg3.jpg") center center no-repeat;
-        // background-size:100% 100%;
-        background-color: #26a2ff;
         .px2rem(border-radius, 10);
-        color:#fff;
+        background-color: #fff;
         h1{
             text-align: center;
             .px2rem(padding, 8);
             .px2rem(font-size, 35);
-            color: purple;
         }
         ul{
            .px2rem(margin-bottom, 15); 
