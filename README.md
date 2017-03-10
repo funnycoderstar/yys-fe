@@ -4,10 +4,10 @@
 
 ## 效果图
 
-<img src="./src/assets/search.jpg" />
-<img src="./src/assets/searchResult.jpg" />
-<img src="./src/assets/heroList.jpg" />
-<img src="./src/assets/hero.jpg" />
+<img src="./src/assets/search.png" width="200" height="300"/>
+<img src="./src/assets/searchResult.png" width="200" height="300"/>
+<img src="./src/assets/heroList.jpg" width="200" height="300"/>
+<img src="./src/assets/hero.png" width="200" height="300"/>
 
 ## 基本
     - 构建工具：webpack；
