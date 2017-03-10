@@ -61,7 +61,6 @@
             .heroItem {
                 width: 50%;
                 float: left;
-                // border-top: 1px solid #f5f5f5;
                 .px2rem(border-width, 10);
                 .px2rem(padding, 20);
                 box-sizing: border-box;

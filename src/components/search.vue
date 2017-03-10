@@ -30,7 +30,7 @@
                 if (this.heroName !== '') {
                     this.$router.push(`/SearchHero/${this.heroName}`);
                 } else {
-                    console.log('请输入要搜索的式神');
+                    alert('请输入要搜索的式神');
                 }
             }
         }
@@ -85,7 +85,7 @@
                 50);
             }
             input:focus {
-                border: 1px solid pink;
+                border: 1px solid #3fadf9;
                 outline: none;
             }
             span {

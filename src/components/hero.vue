@@ -3,7 +3,7 @@
         <ComHead :pageTitle="heroInfo.name">
         </ComHead>
         <div class="hero-info">
-            <div class="heroFace" v-if="heroInfo.name" :key="hero.id">
+            <div class="heroFace" v-if="heroInfo.name">
                 <img :src="require(`../assets/${heroInfo.name}.jpg`)" alt="">
             </div>
             <div v-else  class="heroFace"></div>
@@ -27,7 +27,7 @@
                     :life="awaken.life" :attack="awaken.attack"></HeroAwaken>
             </mt-tab-container-item>
             <mt-tab-container-item id="2" v-if="heroInfo.skills">
-                <HeroSkills v-for="item in heroInfo.skills" :key="item.id" :upgrade="item.upgrade" :effect="item.effect" :Consumption="item.Consumption"
+                <HeroSkills v-for="item in heroInfo.skills"  :upgrade="item.upgrade" :effect="item.effect" :Consumption="item.Consumption"
                     :name="item.name"></HeroSkills>
             </mt-tab-container-item>
         </mt-tab-container>
@@ -108,7 +108,7 @@
                 li {
                     .px2rem(line-height, 40);
                     span {
-                        color: red;
+                        color: #3fadf9;
                     }
                 }
             }

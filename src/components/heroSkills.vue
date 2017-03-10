@@ -62,7 +62,7 @@
                .px2rem(text-indent, 35);
                .px2rem(line-height, 40);
                span{
-                   color:red;
+                   color:#3fadf9;
                }
            } 
         }

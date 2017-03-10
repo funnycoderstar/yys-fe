@@ -1,6 +1,7 @@
 <template>
     <div class="item-container" @click="handleClick">
-        <img :src="selected ? imageSelected : image" class="item-img">
+        <i class="icon":class="{ selected }" v-html="'&#xe6bb'" v-if="name==='玩家'"></i>
+        <i class="icon":class="{ selected }" v-html="'&#xe635;'" v-else></i>
         <p class="item-name" :class="{ selected }">
             {{ name }}
         </p>
@@ -8,8 +9,6 @@
 </template>
 
 <script>
-    import defaultImage from '../assets/home@3x.png';
-    import defaultImageSelected from '../assets/home_hover@3x.png';
 
     export default {
         name: 'tabBarItem',
@@ -17,14 +16,6 @@
             name: {
                 type: String,
                 default: 'name'
-            },
-            image: {
-                type: String,
-                default: defaultImage
-            },
-            imageSelected: {
-                type: String,
-                default: defaultImageSelected
             },
             selected: {
                 type: Boolean,
@@ -45,6 +36,24 @@
 
 <style lang="less">
 @import '../util.less';
+    @font-face {
+        font-family: 'iconfont';  /* project id 250493 */
+        src: url('//at.alicdn.com/t/font_sdu82zs5jqbyb9.eot');
+        src: url('//at.alicdn.com/t/font_sdu82zs5jqbyb9.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_sdu82zs5jqbyb9.woff') format('woff'),
+        url('//at.alicdn.com/t/font_sdu82zs5jqbyb9.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_sdu82zs5jqbyb9.svg#iconfont') format('svg');
+    }
+    .icon {
+        font-family: 'iconfont';
+        font-style: normal;
+        .px2rem(font-size, 50);
+        .px2rem(top, -12);
+        position: relative;
+        &.selected {
+           color: #3fadf9;
+       }
+    }
    .item-container {
        float: left;
        width: 50%;
@@ -56,7 +65,7 @@
        position: relative;
        color: #666;
        &.selected {
-           color: #ff6c00;
+           color: #3fadf9;
        }
    }
    .item-img {

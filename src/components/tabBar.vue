@@ -5,8 +5,6 @@
                 v-for="(item, index) of items"
                 :key="item.id"
                 :name="item.name"
-                :image="item.image"
-                :imageSelected="item.imageSelected"
                 :selected="isSelected(item.route)"
                 :route="item.route"
             ></TabBarItem>
@@ -22,13 +20,9 @@
             return {
                 items: [{
                     name: '玩家',
-                    image: require('../assets/home@3x.png'),
-                    imageSelected: require('../assets/home_hover@3x.png'),
                     route: '/player'
                 }, {
                     name: '式神',
-                    image: require('../assets/invest@3x.png'),
-                    imageSelected: require('../assets/invest_hover@3x.png'),
                     route: '/heroList'
                 } ]
             };
@@ -57,8 +51,6 @@
     }
     
     .tab-bar-container {
-        /*.px2rem(padding-top, 12);
-        .px2rem(padding-bottom, 12);*/
         margin: 0;
     }
 </style>

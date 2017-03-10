@@ -81,7 +81,7 @@
             .px2rem(height, 370);
             background-color: #fff;
             span {
-                color: red;
+                color: #3fadf9;
             }
             h1 {
                 text-align: center;
