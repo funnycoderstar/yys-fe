@@ -2,9 +2,13 @@
 
 > A Vue.js project
 
-```
+## 效果图
 
-```
+<img src="./src/assets/search.jpg" />
+<img src="./src/assets/searchResult.jpg" />
+<img src="./src/assets/heroList.jpg" />
+<img src="./src/assets/hero.jpg" />
+
 ## 基本
     - 构建工具：webpack；
     - 语言：Es6；
@@ -38,15 +42,15 @@
 ```
 ## 已经完成的模块
 
-- 式神搜索页面
-- 式神详细信息页面
-- 觉醒材料
-- 技能
+- [x] 式神搜索页面(支持模糊搜索)
+- [x] 式神搜索结果页面
+- [x] 式神列表页面
+- [x] 式神详细信息页面
 
 ## 待完成与优化
 
-- 推荐御魂
-- 推荐搭配
+- [] 推荐御魂
+- [] 推荐搭配
 
 ## Build Setup
 

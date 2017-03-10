@@ -4,7 +4,7 @@
         </ComHead>
         <div class="hero-info">
             <div class="heroFace" v-if="heroInfo.name">
-                <img :src="require(`../assets/${heroInfo.name}.jpg`)" alt="">
+                <img :src="`${apiUrl}${heroInfo.name}.jpg`" alt="">
             </div>
             <div v-else  class="heroFace"></div>
             <ul v-if="heroInfo">
@@ -46,7 +46,8 @@
         data() {
             return {
                 selected: '1',
-                awaken: null
+                awaken: null,
+                apiUrl: ''
             };
         },
         components: {
@@ -60,6 +61,7 @@
             heroInfo: state => state.hero.heroInfo[0]
         }),
         created() {
+            this.apiUrl = window.apiUrl;
             this.$store.dispatch('getHeroInfo', {
                 apiUrl: window.apiUrl,
                 heroName: this.$route.params[0]

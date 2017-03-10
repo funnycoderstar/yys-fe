@@ -5,7 +5,7 @@
         <div class="wrap-heroList fix-float searchHero">
             <ul class="heroItem" v-for="item in herosInfo" @click="showHeroInfo(item.name)">
                 <li>
-                    <img :src="require(`../assets/${item.name}.jpg`)" alt="" class="heroImg">
+                    <img :src="`${apiUrl}${item.name}.jpg`" alt="" class="heroImg">
                 </li>
                 <li class="heroText">
                     <p>{{ item.name }}</p>
@@ -24,13 +24,15 @@
         data() {
             return {
                 title: '搜索结果',
-                herosInfo: null
+                herosInfo: null,
+                apiUrl: ''
             };
         },
         components: {
             ComHead
         },
         created() {
+            this.apiUrl = window.apiUrl;
             vue.axios.get(`${window.apiUrl}hero/${this.$route.params[0]}`).then((response) => {
                 this.herosInfo = response.data;
             });
