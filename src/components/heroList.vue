@@ -59,7 +59,8 @@
     .heroList {
         .wrap-heroList {
             .px2rem(padding-top, 80);
-            background-color: #f1f1f1;
+            .px2rem(padding-bottom, 100);
+            // background-color: #f1f1f1;
             .heroItem {
                 width: 50%;
                 float: left;

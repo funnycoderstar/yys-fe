@@ -89,8 +89,10 @@
                 .px2rem(font-size, 35);
             }
             .heroSkill {
-                text-align: center;
-                .px2rem(line-height, 200);
+                // text-align: center;
+                .px2rem(line-height, 50);
+                .px2rem(padding, 15);
+                .px2rem(text-indent, 50);
             }
             ul {
                 text-align: center;

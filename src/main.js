@@ -19,7 +19,7 @@ Vue.use(vuex);
 
 Vue.config.productionTip = false;
 window.apiUrl = 'http://192.168.199.220:6600/';
-
+// window.apiUrl = './';
 /* eslint-disable no-new */
 new Vue({
     el: '#app',

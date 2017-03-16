@@ -63,8 +63,8 @@
         }
     }
     
-    input:focus {
-        border: 0 ! important;
-        outline: none;
-    }
+    // input:focus {
+    //     border: 0 ! important;
+    //     outline: none;
+    // }
 </style>

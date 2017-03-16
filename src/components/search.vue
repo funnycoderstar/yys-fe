@@ -85,8 +85,8 @@
                 50);
             }
             input:focus {
-                border: 1px solid #3fadf9;
-                outline: none;
+                border: 1px solid #3fadf9 !important;
+                // outline: none;
             }
             span {
                 background-color: #3fadf9;
