@@ -1,4 +1,4 @@
-# yys-fe(阴阳师小助手)
+# yys-fe(阴阳师小助手前端)
 
 > A Vue.js project
 
