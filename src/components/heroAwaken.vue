@@ -5,11 +5,11 @@
             <ul>
                 <li>
                     <p>攻击</p>
-                    <p><span>{{ crit.from }} ~ {{ crit.to }}</span></p>
+                    <p><span>{{ attack.from }} ~ {{ attack.to }}</span></p>
                 </li>
                 <li>
                     <p>生命</p>
-                    <p><span>{{ speed.from }} ~ {{ speed.to }}</span></p>
+                    <p><span>{{ life.from }} ~ {{ life.to }}</span></p>
                 </li>
                 <li>
                     <p>防御</p>
@@ -17,11 +17,11 @@
                 </li>
                 <li>
                     <p>速度</p>
-                    <p><span>{{ life.from }} ~ {{ life.to }}</span></p>
+                    <p><span>{{ speed.from }} ~ {{ speed.to }}</span></p>
                 </li>
                 <li>
                     <p>暴击</p>
-                    <p><span>{{ attack.from }} ~ {{ attack.to }}</span></p>
+                    <p><span>{{ crit.from }} ~ {{ crit.to }}</span></p>
                 </li>
             </ul>
         </div>

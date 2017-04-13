@@ -12,7 +12,6 @@
             //         <p>{{ item.rarity }}</p>
             //     </li>
             // </ul>
-
             <div class="sortHero">
                 <h1>SSR</h1>
                     <ul class="heroItem" v-for="item in herosInfo" @click="showHeroInfo(item.name)":key="item.id" v-if="item.rarity === 'SSR'">
