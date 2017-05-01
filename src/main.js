@@ -13,6 +13,10 @@ import stores from './stores/index.js';
 import './match.js';
 require('normalize.css');
 
+if (process.env.NODE_ENV !== 'production') {
+    require('./mocks/index.js');
+}
+
 Vue.use(MintUI);
 Vue.use(vueAxios, axios);
 Vue.use(vuex);

@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "mint-ui": "^2.2.0",
+    "mockjs": "^1.0.1-beta3",
     "normalize.css": "^5.0.0",
     "vue": "^2.2.1",
     "vue-axios": "^1.2.2",
