@@ -14,8 +14,8 @@
 <img src="./src/assets/search.png" width="200" />
 <img src="./src/assets/searchResult.png" width="200" />
 <img src="./src/assets/heroList.jpg" width="200" />
-<img src="./src/assets/hero.png" width="200" />
-<img src="./src/assets/match.png" width="200" />
+<img src="./src/assets/heroTab.png" width="200" />
+<img src="./src/assets/herotabMatch.png" width="200" />
 
 ## 基本
     - 构建工具：webpack；
