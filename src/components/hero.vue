@@ -6,7 +6,7 @@
             <div class="heroFace" v-if="heroInfo.name">
                 <img :src="`${apiUrl}${heroInfo.name}.jpg`" alt="">
             </div>
-            <div v-else  class="heroFace"></div>
+            <div v-else class="heroFace"></div>
             <ul v-if="heroInfo">
                 <li>名称: <span>{{ heroInfo.name }}</span></li>
                 <li>CV: <span>{{ heroInfo.cv }}</span></li>
@@ -27,7 +27,7 @@
                     :life="awaken.life" :attack="awaken.attack"></HeroAwaken>
             </mt-tab-container-item>
             <mt-tab-container-item id="2" v-if="heroInfo.skills">
-                <HeroSkills v-for="item in heroInfo.skills"  :upgrade="item.upgrade" :effect="item.effect" :Consumption="item.Consumption"
+                <HeroSkills v-for="item in heroInfo.skills" :key="item.upgrade":upgrade="item.upgrade" :effect="item.effect" :Consumption="item.Consumption"
                     :name="item.name"></HeroSkills>
             </mt-tab-container-item>
         </mt-tab-container>
@@ -104,7 +104,7 @@
                 }
             }
             ul {
-                float:left;
+                float: left;
                 .px2rem(padding-top, 30);
                 .px2rem(margin-left, 100);
                 li {
@@ -119,7 +119,7 @@
             .px2rem(font-size, 30);
             .px2rem(padding, 10);
         }
-        .mint-tab-container-item{
+        .mint-tab-container-item {
             background-color: #f5f5f5;
         }
     }
