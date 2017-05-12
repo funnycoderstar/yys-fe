@@ -17,8 +17,11 @@
             </ul>
         </div>
         <mt-navbar v-model="selected">
-            <mt-tab-item id="1">觉醒材料</mt-tab-item>
-            <mt-tab-item id="2">式神技能</mt-tab-item>
+            <mt-tab-item id="1">觉醒</mt-tab-item>
+            <mt-tab-item id="2">技能</mt-tab-item>
+            <mt-tab-item id="3">搭配</mt-tab-item>
+            <mt-tab-item id="4">御魂</mt-tab-item>
+            <mt-tab-item id="5">点评</mt-tab-item>
         </mt-navbar>
         <!-- tab-container -->
         <mt-tab-container v-model="selected">
@@ -30,6 +33,27 @@
                 <HeroSkills v-for="item in heroInfo.skills" :key="item.upgrade":upgrade="item.upgrade" :effect="item.effect" :Consumption="item.Consumption"
                     :name="item.name"></HeroSkills>
             </mt-tab-container-item>
+            <mt-tab-container-item id="3">
+                <HeroMatch
+                    :heroMatchImg="heroInfo.heroMatchInfo.heroMatchImg"
+                    :matchInfo="heroInfo.heroMatchInfo.matchInfo"
+                    :matchRemark="heroInfo.heroMatchInfo.matchRemark"
+                ></HeroMatch>
+            </mt-tab-container-item>
+            <mt-tab-container-item id="4">
+                <HeroYuhun
+                    :matchInfo="heroInfo.heroYuxun.matchInfo"
+                    :matchRemark="heroInfo.heroYuxun.matchRemark"
+                    :two="heroInfo.heroYuxun.two"
+                    :four="heroInfo.heroYuxun.four"
+                    :six="heroInfo.heroYuxun.six"
+                ></HeroYuhun>
+            </mt-tab-container-item>
+            <mt-tab-container-item id="5">
+                <HeroRemark
+                :remark="heroInfo.heroRemark.remark"
+                ></HeroRemark>
+            </mt-tab-container-item>
         </mt-tab-container>
     </div>
 </template>
@@ -38,6 +62,9 @@
     import { Navbar, TabItem } from 'mint-ui';
     import HeroAwaken from './heroAwaken.vue';
     import HeroSkills from './heroSkills.vue';
+    import HeroRemark from './heroRemark.vue';
+    import HeroYuhun from './heroYuhun.vue';
+    import HeroMatch from './heroMatch.vue';
     import { mapState } from 'vuex';
     import ComHead from './comHead.vue';
 
@@ -55,7 +82,10 @@
             TabItem,
             HeroAwaken,
             HeroSkills,
-            ComHead
+            ComHead,
+            HeroRemark,
+            HeroYuhun,
+            HeroMatch
         },
         computed: mapState({
             heroInfo: state => state.hero.heroInfo[0]
@@ -87,6 +117,7 @@
     }
     
     .hero {
+        .px2rem(font-size, 26);
         .hero-info {
             .px2rem(width, 750);
             .px2rem(padding-top, 80);
