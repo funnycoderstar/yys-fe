@@ -12,6 +12,7 @@
 <img src="./src/assets/searchResult.png" width="200" />
 <img src="./src/assets/heroList.jpg" width="200" />
 <img src="./src/assets/hero.png" width="200" />
+<img src="./src/assets/match.png" width="200" />
 
 ## 基本
     - 构建工具：webpack；
@@ -50,11 +51,14 @@
 - [x] 式神搜索结果页面
 - [x] 式神列表页面
 - [x] 式神详细信息页面
+- [X] 推荐御魂
+- [X] 推荐搭配
 
 ## 待完成与优化
 
-- [ ] 推荐御魂
-- [ ] 推荐搭配
+- [ ] 搜索功能添加历史搜索和热门搜索
+- [ ] 式神攻略
+- [ ] 式神视频
 
 ## Build Setup
 
