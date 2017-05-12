@@ -6,6 +6,9 @@
 
 <img src="./src/assets/link.png" width="200" />
 
+### [阴阳师小助手后端实现](https://github.com/funnycoderstar/yys-be)
+- nodejs + crawler + koa2 + mongoose
+
 ## 效果图
 
 <img src="./src/assets/search.png" width="200" />
