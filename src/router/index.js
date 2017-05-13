@@ -4,7 +4,7 @@ import Router from 'vue-router';
 import Index from '@/components/index';
 import Player from '@/components/search';
 import Hero from '@/components/hero';
-import HeroList from '@/components/heroList';
+import HeroList from '@/components/sortHero';
 import SearchHero from '@/components/searchHero';
 
 Vue.use(Router);

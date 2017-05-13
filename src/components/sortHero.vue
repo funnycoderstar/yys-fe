@@ -3,51 +3,55 @@
         <ComHead :pageTitle="title">
         </ComHead>
         <div class="wrap-heroList fix-float">
-            // <ul class="heroItem" v-for="item in herosInfo" @click="showHeroInfo(item.name)":key="item.id">
-            //     <li>
-            //         <img :src="`${apiUrl}${item.name}.jpg`" alt="" class="heroImg">
-            //     </li>
-            //     <li class="heroText">
-            //         <p>{{ item.name }}</p>
-            //         <p>{{ item.rarity }}</p>
-            //     </li>
-            // </ul>
-            <div class="sortHero">
-                <h1>SSR</h1>
-                    <ul class="heroItem" v-for="item in herosInfo" @click="showHeroInfo(item.name)":key="item.id" v-if="item.rarity === 'SSR'">
-                    <li>
-                        <img :src="`${apiUrl}${item.name}.jpg`" alt="" class="heroImg">
-                    </li>
-                    <li class="heroText">
-                        <p>{{ item.name }}</p>
-                        <p>{{ item.rarity }}</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="sortHero">
-                <h1>SSR</h1>
-                    <ul class="heroItem" v-for="item in herosInfo" @click="showHeroInfo(item.name)":key="item.id" v-if="item.rarity === 'SR'">
-                    <li>
-                        <img :src="`${apiUrl}${item.name}.jpg`" alt="" class="heroImg">
-                    </li>
-                    <li class="heroText">
-                        <p>{{ item.name }}</p>
-                        <p>{{ item.rarity }}</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="sortHero">
-                <h1>SSR</h1>
-                    <ul class="heroItem" v-for="item in herosInfo" @click="showHeroInfo(item.name)":key="item.id" v-if="item.rarity === 'ßR'">
-                    <li>
-                        <img :src="`${apiUrl}${item.name}.jpg`" alt="" class="heroImg">
-                    </li>
-                    <li class="heroText">
-                        <p>{{ item.name }}</p>
-                        <p>{{ item.rarity }}</p>
-                    </li>
-                </ul>
-            </div>
+            <mt-navbar v-model="selected">
+                <mt-tab-item id="1">SSR</mt-tab-item>
+                <mt-tab-item id="2">SR</mt-tab-item>
+                <mt-tab-item id="3">R</mt-tab-item>
+            </mt-navbar>
+            <mt-tab-container v-model="selected">
+                <mt-tab-container-item id="1">
+                    <div class="sortHero fix-float">
+                        <ul class="heroItem fix-float" v-for="item in herosInfo" @click="showHeroInfo(item.name)" :key="item.id" v-if="item.rarity === 'SSR'">
+                            <li>
+                                <img :src="`${apiUrl}${item.name}.jpg`" alt="" class="heroImg">
+                            </li>
+                            <li class="heroText">
+                                <p>{{ item.name }}</p>
+                                <p>{{ item.rarity }}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </mt-tab-container-item>
+                <mt-tab-container-item id="2">
+                    <div class="sortHero fix-float">
+                        <ul class="heroItem fix-float" v-for="item in herosInfo" @click="showHeroInfo(item.name)" :key="item.id" v-if="item.rarity === 'SR'">
+                            <li>
+                                <img :src="`${apiUrl}${item.name}.jpg`" alt="" class="heroImg">
+                            </li>
+                            <li class="heroText">
+                                <p>{{ item.name }}</p>
+                                <p>{{ item.rarity }}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </mt-tab-container-item>
+                <mt-tab-container-item id="3">
+                    <div class="sortHero fix-float">
+                        <ul class="heroItem fix-float" v-for="item in herosInfo" @click="showHeroInfo(item.name)" :key="item.id" v-if="item.rarity === 'R'">
+                            <li>
+                                <img :src="`${apiUrl}${item.name}.jpg`" alt="" class="heroImg">
+                            </li>
+                            <li class="heroText">
+                                <p>{{ item.name }}</p>
+                                <p>{{ item.rarity }}</p>
+                            </li>
+                        </ul>
+                    </div>
+                </mt-tab-container-item>
+            </mt-tab-container>
+
+
+
         </div>
     </div>
 </template>
@@ -61,7 +65,8 @@
             return {
                 title: '式神列表',
                 herosInfo: null,
-                apiUrl: ''
+                apiUrl: '',
+                selected: '1'
             };
         },
         components: {
@@ -92,11 +97,24 @@
             clear: both;
         }
     }
+    
     .heroList {
         .wrap-heroList {
             .px2rem(padding-top, 80);
             .px2rem(padding-bottom, 100);
-            // background-color: #f1f1f1;
+            .mint-tab-item-label {
+                .px2rem(font-size, 28);
+            }
+            .mint-navbar {
+                position: fixed;
+                width: 100%;
+                z-index: 100;
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            .mint-tab-container {
+                .px2rem(padding-top, 90);
+            }
             .heroItem {
                 width: 50%;
                 float: left;

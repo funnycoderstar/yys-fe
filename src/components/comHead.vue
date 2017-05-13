@@ -43,6 +43,7 @@
         text-align: center;
         position: fixed;
         width: 100%;
+        z-index: 100;
        .px2rem(line-height, 60);
         background-color: #fff;
         .px2rem(font-size, 36);
