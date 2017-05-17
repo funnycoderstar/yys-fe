@@ -10,9 +10,9 @@
             <input type="text" placeholder="搜索式神" v-model="heroName">
             <span @click="showHero">搜索</span>
         </div>
-        <div class="img">
+        <!--<div class="img">
             <img src="../assets/bunny.gif" alt="">
-        </div>
+        </div>-->
     </div>
 </template>
 
@@ -60,7 +60,10 @@
         }
         .logo {
             .px2rem(padding,
-            150);
+            80);
+            img {
+                .px2rem(width, 150);
+            }
         }
         .search {
             input {
@@ -82,11 +85,11 @@
                 .px2rem(margin-left,
                 -300);
                 .px2rem(margin-top,
-                50);
+                40);
             }
             input:focus {
                 border: 1px solid #3fadf9 !important;
-                // outline: none;
+                outline: none;
             }
             span {
                 background-color: #3fadf9;
@@ -99,7 +102,7 @@
                 .px2rem(width,
                 100);
                 .px2rem(margin-top,
-                50);
+                42);
                 .px2rem(height,
                 50);
                 .px2rem(line-height,
@@ -109,7 +112,7 @@
         }
         .img {
             .px2rem(padding-top,
-            300);
+            100);
         }
     }
 </style>

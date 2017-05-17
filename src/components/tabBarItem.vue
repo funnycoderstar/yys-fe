@@ -48,7 +48,6 @@
         font-family: 'iconfont';
         font-style: normal;
         .px2rem(font-size, 50);
-        .px2rem(top, -12);
         position: relative;
         &.selected {
            color: #3fadf9;
@@ -61,9 +60,9 @@
    }
    .item-name {
        .px2rem(font-size, 22);
-       .px2rem(top, -12);
        position: relative;
        color: #666;
+       .px2rem(top, 4);
        &.selected {
            color: #3fadf9;
        }
@@ -71,7 +70,6 @@
    .item-img {
        .px2rem(width, 48);
        .px2rem(height, 48);
-       .px2rem(top, -12);
        position: relative;
    }
 </style>

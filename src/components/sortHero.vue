@@ -110,16 +110,25 @@
                 width: 100%;
                 z-index: 100;
                 border-bottom: 1px solid #e5e5e5;
+                border-top: 1px solid #e5e5e5;
             }
 
             .mint-tab-container {
                 .px2rem(padding-top, 90);
             }
+            .is-selected{
+                border-bottom: 1px solid #3fadf9 !important;
+                margin-bottom: 0 !important;
+            }
+            .mint-tab-item {
+                .comDis(padding, 20, 0);
+            }
             .heroItem {
                 width: 50%;
                 float: left;
                 .px2rem(border-width, 10);
-                .px2rem(padding, 20);
+                .px2rem(padding, 15);
+                .px2rem(padding-left, 50);
                 box-sizing: border-box;
                 li {
                     float: left;
