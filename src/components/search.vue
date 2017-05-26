@@ -1,8 +1,5 @@
 <template>
     <div class="home fix-float">
-        <!--<div class="com-head">
-            {{ title }}
-        </div>-->
         <div class="logo">
             <img src="../assets/logo.png" alt="">
         </div>
@@ -10,9 +7,6 @@
             <input type="text" placeholder="搜索式神" v-model="heroName">
             <span @click="showHero">搜索</span>
         </div>
-        <!--<div class="img">
-            <img src="../assets/bunny.gif" alt="">
-        </div>-->
     </div>
 </template>
 

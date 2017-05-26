@@ -12,6 +12,7 @@
 </script>
 
 <style lang="less">
+@import './util.less';
     @font-face {
         font-family: 'iconfont';  /* project id 250493 */
         src: url('//at.alicdn.com/t/font_sdu82zs5jqbyb9.eot');
@@ -62,9 +63,10 @@
             clear: both;
         }
     }
-    
-    // input:focus {
-    //     border: 0 ! important;
-    //     outline: none;
-    // }
+    .com-page-wrap {
+        .px2rem(padding-top, 80);
+    }
+    .com-page-wrap1 {
+        .px2rem(padding-top, 0);
+    }
 </style>

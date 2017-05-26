@@ -10,6 +10,7 @@ import axios from 'axios';
 import vueAxios from 'vue-axios';
 import vuex from 'vuex';
 import stores from './stores/index.js';
+import setWechatTitle from './setWechatTitle.js';
 
 // import './match.js';
 require('normalize.css');
@@ -21,6 +22,11 @@ if (process.env.NODE_ENV !== 'production') {
 Vue.use(MintUI);
 Vue.use(vueAxios, axios);
 Vue.use(vuex);
+
+router.afterEach((transition) => {
+    const title = transition.name;
+    setWechatTitle(title);
+});
 
 Vue.config.productionTip = false;
 // window.apiUrl = 'http://192.168.199.220:6600/';
