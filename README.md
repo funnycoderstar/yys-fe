@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-### [项目链接](http://yys.suisuijiang.com/#/)
+### [项目链接](http://yys.wangyaxing.top/#/)
 
 <img src="./src/assets/link.png" width="200" />
 
