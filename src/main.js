@@ -10,7 +10,7 @@ import axios from 'axios';
 import vueAxios from 'vue-axios';
 import vuex from 'vuex';
 import stores from './stores/index.js';
-import setWechatTitle from './setWechatTitle.js';
+import setWechatTitle from './setWeChatTitle.js';
 
 // import './match.js';
 require('normalize.css');
