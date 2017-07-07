@@ -37,8 +37,6 @@
     .home {
         text-align: center;
         background: url("../assets/bg.jpg") center center;
-        .px2rem(width,
-        750);
         .px2rem(height,
         1334);
         background-size: 100% 100%;
