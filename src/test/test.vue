@@ -33,10 +33,10 @@ export default {
         // for (let i = 1; i <= 10; i++) {
         //     this.list.push(i);
         // }
-        window.addEventListener('scroll', this.handleScroll);
+        window.addEventListener('scroll', this.throttleV2(this.handleScroll, 500, 2000));
     },
     destroyed () {
-        window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('scroll', this.throttleV2(this.handleScroll, 500, 2000));
     },
     mounted() {
         // this.wrapperHeight = document.documentElement.clientHeight - this.$refs.wrapper.getBoundingClientRect().top;
@@ -65,7 +65,7 @@ export default {
             } else if (document.body) {
                 scrollTop = document.body.scrollTop;
             }
-            // console.log(scrollTop, '获取滚动条当前的位置');
+            console.log(scrollTop, '获取滚动条当前的位置');
             return scrollTop;
         },
         // 获取当前可视范围的高度
@@ -87,28 +87,28 @@ export default {
         handleScroll () {
             if (this.getScrollTop() + this.getClientHeight() >= this.getScrollHeight() - 30) {
                 console.log('已经到底部');
-                this.loadMore()
+                this.loadMore();
             }
         },
-        // throttleV2(fn, delay, mustRunDelay) {
-        //     const timer = null;
-        //     let t_start = null;
-        //     return function(){
-        //         const context = this, args = arguments, t_curr = +new Date();
-        //         clearTimeout(timer);
-        //         if (!t_start){
-        //             t_start = t_curr;
-        //         }
-        //         if(t_curr - t_start >= mustRunDelay){
-        //             fn.apply(context, args);
-        //             t_start = t_curr;
-        //         } else {
-        //             timer = setTimeout(function(){
-        //                 fn.apply(context, args);
-        //             }, delay);
-        //         }
-        //     };
-        // },
+        throttleV2(fn, delay, mustRunDelay) {
+            let timer = null;
+            let t_start = null;
+            return function(){
+                const context = this, args = arguments, t_curr = +new Date();
+                clearTimeout(timer);
+                if (!t_start){
+                    t_start = t_curr;
+                }
+                if(t_curr - t_start >= mustRunDelay){
+                    fn.apply(context, args);
+                    t_start = t_curr;
+                } else {
+                    timer = setTimeout(function(){
+                        fn.apply(context, args);
+                    }, delay);
+                }
+            };
+        },
     },
 };
 </script>
