@@ -6,7 +6,7 @@ import Player from '@/components/search';
 import Hero from '@/components/hero';
 import HeroList from '@/components/sortHero';
 import SearchHero from '@/components/searchHero';
-import Test from '@/test/test';
+import Test from '@/test/wrap';
 import Demo from '@/test/demo';
 
 Vue.use(Router);
