@@ -28,7 +28,7 @@
         <div class="heroAwaken-info">
             <h1>觉醒材料</h1>
             <ul class="flexWrap">
-                <li v-for="item in material">
+                <li v-for="(item, index) in material" :key="index">
                     <p>{{ item.name }}</p>
                     <p><span>{{ item.count }}</span></p>
                 </li>

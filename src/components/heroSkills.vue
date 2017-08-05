@@ -12,7 +12,7 @@
             </ul>
             <ul>
                 <li class="title">升级:</li>
-                <li v-for="item in upgrade"><span>{{ item }}</span></li>
+                <li v-for="(item,index) in upgrade" :key="index"><span>{{ item }}</span></li>
             </ul>
         </div>
     </div>

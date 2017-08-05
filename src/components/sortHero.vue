@@ -152,7 +152,7 @@ export default {
             box-sizing: border-box;
             li {
                 float: left;
-                text-align: center;
+                // text-align: center;
                 img {
                     .px2rem(width, 120);
                     border-radius: 50%;
