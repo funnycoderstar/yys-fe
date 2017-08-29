@@ -19,10 +19,17 @@ exports.cssLoaders = function (options) {
       sourceMap: options.sourceMap
     }
   }
-
+  // const pxremLoader = {
+  //   loader: 'pxrem-loader',
+  //   options: config.commonn.convertPxToRem.options,
+  // };
+  // console.log(1111, pxremLoader.options.filter);
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    var loaders = [cssLoader]
+    var loaders = [cssLoader];
+    // if (config.commonn.convertPxToRem) {
+    //   loaders.push(pxremLoader);
+    // }
     if (loader) {
       loaders.push({
         loader: loader + '-loader',

@@ -2,6 +2,16 @@
 var path = require('path')
 
 module.exports = {
+//   commonn: {
+//     convertPxToRem: {
+//         enable: true,
+//         options: {
+//             root: 75, // 设计稿为3倍图
+//             filter: /^border/,
+//             fixed: 4,
+//         },
+//     },
+//  },
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),

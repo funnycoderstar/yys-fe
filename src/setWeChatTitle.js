@@ -5,7 +5,7 @@ module.exports = function (title) {
         const iframe = document.createElement('iframe');
         iframe.style.visibility = 'hidden';
         // 替换成站标favicon路径或者任意存在的较小的图片即可
-        iframe.setAttribute('src', 'http://www.fenmiaojinrong.com/favicon.ico');
+        iframe.setAttribute('src', 'http://oo4xdz5i0.bkt.clouddn.com/star.ico');
         const iframeCallback = function () {
             setTimeout(function () {
                 iframe.removeEventListener('load', iframeCallback);
