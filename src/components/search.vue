@@ -51,8 +51,7 @@
             50);
         }
         .logo {
-            .px2rem(padding,
-            80);
+            padding: 80px;
             img {
                 .px2rem(width, 150);
             }

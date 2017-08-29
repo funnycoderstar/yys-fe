@@ -19,17 +19,16 @@ exports.cssLoaders = function (options) {
       sourceMap: options.sourceMap
     }
   }
-  // const pxremLoader = {
-  //   loader: 'pxrem-loader',
-  //   options: config.commonn.convertPxToRem.options,
-  // };
-  // console.log(1111, pxremLoader.options.filter);
+  const pxremLoader = {
+    loader: 'pxrem-loader',
+    options: config.commonn.convertPxToRem.options,
+  };
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
     var loaders = [cssLoader];
-    // if (config.commonn.convertPxToRem) {
-    //   loaders.push(pxremLoader);
-    // }
+    if (config.commonn.convertPxToRem.enable) {
+      loaders.push(pxremLoader);
+    }
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
