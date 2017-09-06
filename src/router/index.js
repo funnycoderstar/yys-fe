@@ -6,7 +6,7 @@ import Player from '@/components/search';
 import Hero from '@/components/hero';
 import HeroList from '@/components/sortHero';
 import SearchHero from '@/components/searchHero';
-// import Test from '@/test/wrap';
+import Test from '@/test/test';
 // import Demo from '@/test/demo';
 
 Vue.use(Router);
@@ -39,12 +39,12 @@ export default new Router({
         path: '/searchHero/*',
         name: '搜索式神',
         component: SearchHero
+    },
+    {
+        path: '/test',
+        name: '测试',
+        component: Test
     }
-    // {
-    //     path: '/test',
-    //     name: '测试',
-    //     component: Test
-    // },
     // {
     //     path: '/demo',
     //     name: 'demo',
